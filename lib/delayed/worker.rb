@@ -1,5 +1,6 @@
 require 'timeout'
 require 'active_support/dependencies'
+require 'active_support/core_ext/kernel/reporting'
 require 'active_support/core_ext/numeric/time'
 require 'active_support/core_ext/class/attribute_accessors'
 require 'active_support/hash_with_indifferent_access'
@@ -16,7 +17,7 @@ module Delayed
     DEFAULT_DEFAULT_PRIORITY = 0
     DEFAULT_DELAY_JOBS       = true
     DEFAULT_QUEUES           = [].freeze
-    DEFAULT_EXCLUDE_SPECIFIED_QUEUES  = false
+    DEFAULT_EXCLUDE_SPECIFIED_QUEUES = false
     DEFAULT_QUEUE_ATTRIBUTES = HashWithIndifferentAccess.new.freeze
     DEFAULT_READ_AHEAD       = 5
 
